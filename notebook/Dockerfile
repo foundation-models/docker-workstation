@@ -25,6 +25,7 @@ RUN echo ${TIMEZONE} > /etc/timezone
 RUN adduser developer staff
 RUN sudo apt update -y && sudo apt install jupyter-notebook jupyter-core  -y
 
+RUN conda update -n base -c defaults conda
 
 #RUN conda env update --name ml --file env_python3.6.yml
 COPY env_python3.8.yml .
@@ -37,7 +38,6 @@ SHELL ["conda", "run", "-n", "python3.8", "python", "-m", "ipykernel", "install"
 SHELL ["/bin/sh", "-c"]
 
 RUN sudo rm -rf /var/lib/apt/lists/*
-
 
 # ENTRYPOINT ["/tini", "--"]
 # Run your program under Tini
