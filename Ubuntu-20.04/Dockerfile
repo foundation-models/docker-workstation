@@ -27,8 +27,7 @@ RUN sudo npm install -g newman newman-reporter-html express eslint express-gener
 RUN wget https://dl.pstmn.io/download/latest/linux64 -O /tmp/postman.tar.gz \
 && sudo tar -xzf /tmp/postman.tar.gz -C /opt/apps \
 && rm /tmp/postman.tar.gz \
-&& sudo ln -s /opt/apps/Postman/Postman /usr/bin/postman \
-
+&& sudo ln -s /opt/apps/Postman/Postman /usr/bin/postman
 
 COPY postman.desktop /usr/share/applications/
 
