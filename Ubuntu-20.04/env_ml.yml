@@ -11,16 +11,15 @@ dependencies:
   - pip
   - pip:
     - setuptools
-    - torchvision>=0.7
+    - torchvision
     - matplotlib
     - pandas
     - requests
     - pyyaml
-    - fastprogress>=0.2.4
     - pillow
     - scikit-learn
     - scipy
     - spacy
-    - pytorch>=1.6.0
+    - pytorch
     - visdom
-    - pytirch-forecase
+    - pytorch-forecase
