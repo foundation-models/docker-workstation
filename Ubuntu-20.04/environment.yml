@@ -11,4 +11,6 @@ dependencies:
   - tini
   - pytorch
   - torchvision
+  - pytorch-forecasting
+  -
 
