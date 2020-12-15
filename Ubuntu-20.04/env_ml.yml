@@ -27,4 +27,4 @@ dependencies:
 #    - spacy
 #    - pytorch
     - visdom
-    - pytorch-forecast
+    - pytorch-forecasting
