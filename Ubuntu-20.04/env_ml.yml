@@ -15,16 +15,16 @@ dependencies:
   - wandb=0.9.7
   - pip
   - pip:
-#    - setuptools
+    - setuptools
 #    - torchvision
-#    - matplotlib
-#    - pandas
-#    - requests
-#    - pyyaml
+    - matplotlib
+    - pandas
+    - requests
+    - pyyaml
 #    - pillow
-#    - scikit-learn
-#    - scipy
+    - scikit-learn
+    - scipy
 #    - spacy
 #    - pytorch
-#    - visdom
-#    - pytorch-forecase
+    - visdom
+    - pytorch-forecast
