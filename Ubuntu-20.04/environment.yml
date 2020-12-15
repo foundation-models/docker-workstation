@@ -12,5 +12,5 @@ dependencies:
   - pytorch
   - torchvision
   - pytorch-forecasting
-  -
+
 
