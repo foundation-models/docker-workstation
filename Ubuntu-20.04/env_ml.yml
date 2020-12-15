@@ -22,4 +22,4 @@ dependencies:
     - spacy
     - pytorch
     - visdom
-    - pytorch-forecase
+#    - pytorch-forecase
