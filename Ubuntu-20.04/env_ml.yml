@@ -5,6 +5,11 @@ channels:
   - defaults
 dependencies:
   - python=3.8
+  - cudatoolkit
+  - pytorch
+  - tensorboard
+  - torchvision
+  - torchtext
   - ffmpeg
   - pillow
   - wandb=0.9.7
@@ -20,6 +25,6 @@ dependencies:
 #    - scikit-learn
 #    - scipy
 #    - spacy
-    - pytorch
+#    - pytorch
 #    - visdom
 #    - pytorch-forecase
