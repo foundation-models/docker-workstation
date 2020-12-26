@@ -19,7 +19,7 @@ RUN apt install -y python3-pip python3-setuptools  libopenblas-base libfreetype6
 
 RUN  pip3 install pytest psutil requests pyyaml
 RUN wget https://nvidia.box.com/shared/static/cs3xn3td6sfgtene6jdvsxlr366m2dhq.whl -O torch-1.7.0-cp36-cp36m-linux_aarch64.whl
-RUN  pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl && \
+RUN  pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 # pip3 install Cython==0.29.21 && \
 # pip3 install h5py==2.10.0 && \
 # pip3 install git-all
