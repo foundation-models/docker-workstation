@@ -9,8 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 EXPOSE 22 4000
 ENV DISPLAY :0
 
-RUN apt update && apt install python3.7-dev # and create symbolic link
-python3-pip python3-setuptools  libopenblas-base libfreetype6-dev protobuf-compiler \
+RUN apt update && apt install python3.7-dev # and create symbolic link \
+   python3-pip python3-setuptools  libopenblas-base libfreetype6-dev protobuf-compiler \
    libprotobuf-dev openssl libssl-dev libcurl4-openssl-dev cython3 libxml2-dev libxslt1-dev python3-numpy python3-scipy\
    python3-matplotlib python3-pandas python3-opencv cmake libjemalloc-dev libboost-dev  libboost-filesystem-dev \
    libboost-system-dev libboost-regex-dev python3-dev autoconf flex bison  libssl-dev curl libhdf5-dev \
