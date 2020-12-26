@@ -1,29 +1,26 @@
-FROM hossein20s/docker-workstation:conda
+FROM nvcr.io/nvidia/l4t-base:r32.4.3
 MAINTAINER HosseinAkhlaghpour@gmail.com
 
-# docker build -t hossein20s/docker-workstation:conda-pytorch .
+# docker build -t hossein20s/docker-workstation:nano-pytorch .
 # use developer as the main user to install-> use sudo for any RUN command
 
+ARG TIMEZONE="America/Los_Angeles"
 ENV DEBIAN_FRONTEND=noninteractive
 EXPOSE 22 4000
 ENV DISPLAY :0
-ARG USER=developer
-ARG UID=1000
 
-ENV LC_ALL C.UTF-8
-ENV LANG C.UTF-8
+RUN apt update && apt install python3.7-dev # and create symbolic link
+python3-pip python3-setuptools  libopenblas-base libfreetype6-dev protobuf-compiler \
+   libprotobuf-dev openssl libssl-dev libcurl4-openssl-dev cython3 libxml2-dev libxslt1-dev python3-numpy python3-scipy\
+   python3-matplotlib python3-pandas python3-opencv cmake libjemalloc-dev libboost-dev  libboost-filesystem-dev \
+   libboost-system-dev libboost-regex-dev python3-dev autoconf flex bison  libssl-dev curl libhdf5-dev \
+   libc-ares-dev libeigen3-dev libatlas-base-dev libopenblas-dev libblas-dev liblapack-dev
 
-user root
-
-ARG TIMEZONE="America/Los_Angeles"
-RUN echo ${TIMEZONE} > /etc/timezone
-
-COPY env_ml.yml .
-
-RUN conda env update --name ml --file env_ml.yml
-RUN sudo chgrp -R users /opt/conda/envs/ml && sudo chmod -R g+w /opt/conda/envs/ml
-
-ENTRYPOINT ["/nxserver.sh"]
-
-#USER $UID
-#WORKDIR /home/${USER}
+RUN wget https://nvidia.box.com/shared/static/cs3xn3td6sfgtene6jdvsxlr366m2dhq.whl -O torch-1.7.0-cp36-cp36m-linux_aarch64.whl && \
+ pip3 install pytest psutil requests pyyaml && \
+ pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl && \
+ pip3 install Cython==0.29.21 && \
+ pip3 install h5py==2.10.0 && \
+ pip3 install git-all
+ pip3 install fastparquet
+ pip3 install pyarrow
