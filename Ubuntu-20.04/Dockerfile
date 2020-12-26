@@ -5,6 +5,12 @@ MAINTAINER HosseinAkhlaghpour@gmail.com
 # use developer as the main user to install-> use sudo for any RUN command
 
 ARG TIMEZONE="America/Los_Angeles"
+ARG USER=developer
+ARG UID=1000
+ARG GID=1000
+# default password for user
+ARG PW=developer
+
 ENV DEBIAN_FRONTEND=noninteractive
 EXPOSE 22 4000
 ENV DISPLAY :0
@@ -25,3 +31,13 @@ RUN  pip3 install pytest psutil requests pyyaml
 # pip3 install git-all
 # pip3 install fastparquet
 # pip3 install pyarrow
+
+# Option1: Using unencrypted password/ specifying password
+RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd \
+&& echo "${USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+&& adduser ${USER} users && adduser ${USER} sudo \
+&& usermod --shell /bin/bash ${USER}
+
+ENTRYPOINT ["/bin/sh", "-c", "$0 \"$@\"", "tail -f /dev/null"]
+
+USER ${USER}
