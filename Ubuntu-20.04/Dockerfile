@@ -10,7 +10,7 @@ EXPOSE 22 4000
 ENV DISPLAY :0
 
 RUN apt update && apt install -y python3.7-dev
-RUN ln -s /usr/bin/python3.7 python && ln -s /usr/bin/python3.7 python
+RUN rm /usr/bin/python /usr/bin/python3 && ln -s /usr/bin/python3.7 /usr/bin/python && ln -s /usr/bin/python3.7 /usr/bin/python3
 RUN apt install -y python3-pip python3-setuptools  libopenblas-base libfreetype6-dev protobuf-compiler \
    libprotobuf-dev openssl libssl-dev libcurl4-openssl-dev cython3 libxml2-dev libxslt1-dev python3-numpy python3-scipy\
    python3-matplotlib python3-pandas python3-opencv cmake libjemalloc-dev libboost-dev  libboost-filesystem-dev \
