@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py
+FROM nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py3
 MAINTAINER HosseinAkhlaghpour@gmail.com
 
 # docker build -t hossein20s/jetson-nano:pytorch-forcast .
