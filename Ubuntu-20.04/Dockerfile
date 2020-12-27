@@ -33,7 +33,7 @@ RUN pip3 install matplotlib pillow==5.4.1
 # pip3 install Cython==0.29.21 && \
 # pip3 install h5py==2.10.0 && \
 # pip3 install git-all
-RUN pip3 install fastparquet
+# RUN pip3 install fastparquet
 RUN pip3 install pyarrow
 
 # Option1: Using unencrypted password/ specifying password
