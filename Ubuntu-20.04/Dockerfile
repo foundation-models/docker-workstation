@@ -1,7 +1,7 @@
-FROM nvcr.io/nvidia/l4t-base:r32.4.3
+FROM nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py
 MAINTAINER HosseinAkhlaghpour@gmail.com
 
-# docker build -t hossein20s/docker-workstation:nano-pytorch .
+# docker build -t hossein20s/jetson-nano:pytorch-forcast .
 # use developer as the main user to install-> use sudo for any RUN command
 
 ARG TIMEZONE="America/Los_Angeles"
@@ -27,14 +27,14 @@ RUN ln -s /usr/bin/pip3 /usr/bin/pip
 RUN libjpeg-dev libfreetype6-dev pkg-config libpng-dev libhdf5-serial-dev hdf5-tools
 
 RUN  pip3 install pytest psutil requests pyyaml
+RUN pip3 install matplotlib pillow==5.4.1
 #RUN wget https://nvidia.box.com/shared/static/cs3xn3td6sfgtene6jdvsxlr366m2dhq.whl -O torch-1.7.0-cp36-cp36m-linux_aarch64.whl && \
 #    pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
 # pip3 install Cython==0.29.21 && \
 # pip3 install h5py==2.10.0 && \
 # pip3 install git-all
-# pip3 install fastparquet
-# pip3 install pyarrow
-# pip3 install matplotlib pillow==5.4.1
+RUN pip3 install fastparquet
+RUN pip3 install pyarrow
 
 # Option1: Using unencrypted password/ specifying password
 RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd \
