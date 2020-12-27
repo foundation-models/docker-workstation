@@ -24,9 +24,9 @@ RUN apt install -y python3-pip python3-setuptools  libopenblas-base libfreetype6
    libc-ares-dev libeigen3-dev libatlas-base-dev libopenblas-dev libblas-dev liblapack-dev
 
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
-RUN libjpeg-dev libfreetype6-dev pkg-config libpng-dev libhdf5-serial-dev hdf5-tools
+RUN apt install -y libjpeg-dev libfreetype6-dev pkg-config libpng-dev libhdf5-serial-dev hdf5-tools
 
-RUN  pip3 install pytest psutil requests pyyaml
+RUN pip3 install pytest psutil requests pyyaml
 RUN pip3 install matplotlib pillow==5.4.1
 #RUN wget https://nvidia.box.com/shared/static/cs3xn3td6sfgtene6jdvsxlr366m2dhq.whl -O torch-1.7.0-cp36-cp36m-linux_aarch64.whl && \
 #    pip3 install torch-1.7.0-cp36-cp36m-linux_aarch64.whl
