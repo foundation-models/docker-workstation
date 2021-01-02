@@ -6,10 +6,10 @@ channels:
 dependencies:
   - python=3.8
   - cudatoolkit
-  - pytorch
+#  - pytorch
   - tensorboard
-  - torchvision
-  - torchtext
+#  - torchvision
+#  - torchtext
   - ffmpeg
   - pillow
   - wandb=0.9.7
@@ -26,7 +26,9 @@ dependencies:
     - scipy
 #    - spacy
 #    - pytorch
-    - visdom
-    - pytorch-forecasting
+#    - visdom
+#    - torch
     - pyarrow
     - fastparquet
+    - pytorch-forecasting
+
