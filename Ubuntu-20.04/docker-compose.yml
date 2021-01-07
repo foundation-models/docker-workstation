@@ -2,7 +2,7 @@ version: '3'
 services:
   workstation:
     image: hossein20s/docker-workstation:mobile
-    container_name: workstation
+    container_name: workstation2
 #     command: tail -f /dev/null
     privileged: true
     # network_mode: "host"
