@@ -19,5 +19,5 @@ dependencies:
     - google-auth-httplib2
     - google-auth-oauthlib
     - PyYAML
-    -
+    - jwt
 
