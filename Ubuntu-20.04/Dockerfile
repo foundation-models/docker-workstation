@@ -1,7 +1,7 @@
 FROM hossein20s/docker-workstation:ml-pytorch-nvidia
 MAINTAINER HosseinAkhlaghpour@gmail.com
 
-# docker build -t hossein20s/docker-workstation:custom .
+# docker build -t hossein20s/docker-workstation:ml-pytorch-mobile .
 # use developer as the main user to install-> use sudo for any RUN command
 
 ENV DEBIAN_FRONTEND=noninteractive
