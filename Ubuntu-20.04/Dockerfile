@@ -28,8 +28,8 @@ RUN conda env update --name python3.8 --file env_python3.8.yml
 # RUN conda env create --file env_python3.8.yml
 
 COPY env_python3.6.yml .
-RUN conda env update --name ag --file env_python3.6.yml
-# RUN conda env create --file env_python3.6.yml
+# RUN conda env update --name ag --file env_python3.6.yml
+RUN conda env create --file env_python3.6.yml
 
 COPY env_python2.7.yml .
 RUN conda env update --name python2.7 --file env_python2.7.yml
