@@ -20,8 +20,8 @@ dependencies:
     - torchvision
     - matplotlib
     - pandas
-    - requests
-    - pyyaml
+#    - requests
+#    - pyyaml
 #    - pillow
     - scikit-learn
     - scipy
@@ -34,5 +34,5 @@ dependencies:
     - pytorch-forecasting
     - gspread
     - gspread-pandas
-    - google-auth
+    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
 
