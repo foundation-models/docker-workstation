@@ -35,4 +35,9 @@ dependencies:
     - gspread
     - gspread-pandas
     - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
+    - google-api-python-client
+    - Pyrebase
+    - firebase-admin # firebase-admin should come after Pyrebase and requests otherwise Pyrebase installs the wrong version of requests 2.11.1
+    - firebase
+    - jwt
 
