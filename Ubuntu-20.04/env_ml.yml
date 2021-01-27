@@ -12,6 +12,7 @@ dependencies:
     - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
     - google-api-python-client
     - GoogleImagesSearch
+    - google_images_download
     - Pyrebase
     - firebase-admin # firebase-admin should come after Pyrebase and requests otherwise Pyrebase installs the wrong version of requests 2.11.1
     - firebase
