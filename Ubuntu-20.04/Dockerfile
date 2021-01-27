@@ -22,6 +22,6 @@ COPY env_ml.yml .
 RUN conda update -n base -c defaults conda \
   && conda env create --name ml --file env_ml.yml
 
-RUN sudo chgrp -R users /opt/conda/envs/ml && sudo chmod -R g+w /opt/conda/envs/ml
+# RUN sudo chgrp -R users /opt/conda/envs/ml && sudo chmod -R g+w /opt/conda/envs/ml
 
 ENTRYPOINT ["/nxserver.sh"]

@@ -7,20 +7,16 @@ dependencies:
   - pip
   - pip:
     - setuptools
-    - urllib3
+    - gspread
+    - gspread-pandas
+    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
+    - google-api-python-client
+    - google_images_download
+    - Pyrebase
     - firebase-admin # firebase-admin should come after Pyrebase and requests otherwise Pyrebase installs the wrong version of requests 2.11.1
     - firebase
-    - Pyrebase
-    - requests
-    - oauth2client
-    - protobuf
-    - gcloud
-    - google-api-python-client
-    - google-auth-httplib2
-    - google-auth-oauthlib
-    - google-api-python-client
-    - oauth2client
-    - PyYAML
     - jwt
     - emoji
+    - fake_rpi
+
 
