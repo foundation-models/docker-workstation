@@ -37,7 +37,7 @@ RUN conda env update --name python2.7 --file env_python2.7.yml
 
 # install PyCharm professional
 RUN cd /tmp && \
-    sudo wget -q https://download.jetbrains.com/python/pycharm-professional-2020.3.2.3.tar.gz -O pycharm.tar.gz && \
+    sudo wget -q https://download.jetbrains.com/python/pycharm-professional-2020.3.3.tar.gz -O pycharm.tar.gz && \
     sudo mkdir -p /opt/apps && cd /opt/apps && sudo tar xvfz /tmp/pycharm.tar.gz && sudo rm /tmp/pycharm.tar.gz
 
 RUN sudo apt-get update -y && sudo apt --fix-broken install -y \
