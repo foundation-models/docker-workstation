@@ -26,7 +26,7 @@ services:
       # xauth nlist $DISPLAY | sed -e 's/^..../ffff/' | xauth -f /tmp/.docker.xauth nmerge -
       # - /tmp/.X11-unix:/tmp/.X11-unix
       # - /tmp/.docker.xauth:/tmp/.docker.xauthx
-      - dev:/opt/ml
+      - dev:/opt/dev
 volumes:
   dev:
     external: true
