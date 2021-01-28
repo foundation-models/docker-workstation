@@ -85,7 +85,7 @@ dependencies:
     - pandas==0.25.1
     - scipy==1.4.1
     - lemoncheesecake==1.7.0
-#    - snakeviz # Unable to locate package snakeviz
+    - snakeviz
     - statsmodels==0.8.0
     # borrowed from circleci task
     - pytest==6.1.2

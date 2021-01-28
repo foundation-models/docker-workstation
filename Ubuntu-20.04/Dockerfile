@@ -41,7 +41,7 @@ RUN cd /tmp && \
     sudo mkdir -p /opt/apps && cd /opt/apps && sudo tar xvfz /tmp/pycharm.tar.gz && sudo rm /tmp/pycharm.tar.gz
 
 RUN sudo apt-get update -y && sudo apt --fix-broken install -y \
-  && sudo apt install coinor-libcbc-dev coinor-cbc snakeviz -y
+  && sudo apt install coinor-libcbc-dev coinor-cbc -y
 
 
 
