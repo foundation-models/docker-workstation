@@ -21,7 +21,7 @@ dependencies:
     - matplotlib
     - pandas
     - requests
-    - pyyaml
+#   - pyyaml
 #    - pillow
     - scikit-learn
     - scipy
