@@ -9,15 +9,15 @@ dependencies:
   - mpi4py=3.0 # installs cuda-aware openmpi
   - pytorch
   - tensorboard
-  - torchvision
-  - torchtext
+#  - torchvision
+#  - torchtext
   - ffmpeg
   - pillow
   - wandb=0.9.7
   - pip
   - pip:
     - setuptools
-    - torchvision
+#    - torchvision
     - matplotlib
     - pandas
 #    - requests
@@ -32,18 +32,18 @@ dependencies:
     - pyarrow
     - fastparquet
     - pytorch-forecasting
-#    - gspread
-#    - gspread-pandas
-#    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
-#    - google-api-python-client
-#    - google-images-search
-#    - google_images_download
-#    - Pyrebase
-#    - firebase-admin # firebase-admin should come after Pyrebase and requests otherwise Pyrebase installs the wrong version of requests 2.11.1
-#    - firebase
-#    - flask
-#    - jwt
-#    - emoji
-#    - fake_rpi
+    - gspread
+    - gspread-pandas
+    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
+    - google-api-python-client
+    - google-images-search
+    - google_images_download
+    - Pyrebase
+    - firebase-admin # firebase-admin should come after Pyrebase and requests otherwise Pyrebase installs the wrong version of requests 2.11.1
+    - firebase
+    - flask
+    - jwt
+    - emoji
+    - fake_rpi
 
 
