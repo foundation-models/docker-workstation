@@ -20,8 +20,8 @@ dependencies:
 #    - torchvision # causing segmentation fault
     - matplotlib
     - pandas
-#    - requests
-#    - pyyaml
+    - requests
+    - pyyaml
 #    - pillow
     - scikit-learn
     - scipy
