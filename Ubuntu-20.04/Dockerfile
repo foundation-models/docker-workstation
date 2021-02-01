@@ -23,8 +23,8 @@ RUN conda env update --name ml --file env_ml.yml
 # RUN sudo chgrp -R users /opt/conda/envs/ml && sudo chmod -R g+w /opt/conda/envs/ml
 
 # Create the environment:
-COPY env_python3.8.yml .
-RUN conda env update --name python3.8 --file env_python3.8.yml
+#COPY env_python3.8.yml .
+#RUN conda env update --name python3.8 --file env_python3.8.yml
 # RUN conda env create --file env_python3.8.yml
 
 #COPY env_python3.6.yml .
@@ -43,7 +43,7 @@ RUN conda env update --name python3.8 --file env_python3.8.yml
 #RUN sudo apt-get update -y && sudo apt --fix-broken install -y \
 #  && sudo apt install coinor-libcbc-dev coinor-cbc -y
 
-RUN sudo chgrp -R users /opt/conda/envs && sudo chmod -R g+w /opt/conda/envs
+#RUN sudo chgrp -R users /opt/conda/envs && sudo chmod -R g+w /opt/conda/envs
 
 ENTRYPOINT ["/nxserver.sh"]
 
