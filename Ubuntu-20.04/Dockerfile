@@ -43,7 +43,7 @@ RUN conda env update --name ml --file env_ml.yml
 #RUN sudo apt-get update -y && sudo apt --fix-broken install -y \
 #  && sudo apt install coinor-libcbc-dev coinor-cbc -y
 
-#RUN sudo chgrp -R users /opt/conda/envs && sudo chmod -R g+w /opt/conda/envs
+RUN sudo chgrp -R users /opt/conda/envs && sudo chmod -R g+w /opt/conda/envs
 
 ENTRYPOINT ["/nxserver.sh"]
 
