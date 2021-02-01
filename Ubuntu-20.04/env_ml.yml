@@ -4,12 +4,12 @@ channels:
   - pytorch
   - defaults
 dependencies:
-  - python=3.8
+  - python=3.9
   - cudatoolkit=10.1
   - mpi4py=3.0 # installs cuda-aware openmpi
   - pytorch
   - tensorboard
-#  - torchvision
+#  - torchvision # causing segmentation fault
 #  - torchtext
   - ffmpeg
   - pillow
@@ -17,7 +17,7 @@ dependencies:
   - pip
   - pip:
     - setuptools
-#    - torchvision
+#    - torchvision # causing segmentation fault
     - matplotlib
     - pandas
 #    - requests
