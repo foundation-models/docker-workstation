@@ -10,7 +10,7 @@ dependencies:
   - pytorch
   - tensorboard
 #  - torchvision # causing segmentation fault
-  - torchtext
+#  - torchtext # giving a different error
   - ffmpeg
   - pillow
   - wandb=0.9.7
@@ -21,7 +21,7 @@ dependencies:
     - matplotlib
     - pandas
     - requests
-#   - pyyaml
+#   - pyyaml # dont set it. Others library will set this
 #    - pillow
     - scikit-learn
     - scipy
