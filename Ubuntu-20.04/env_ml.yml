@@ -9,7 +9,7 @@ dependencies:
   - mpi4py=3.0 # installs cuda-aware openmpi
   - pytorch
   - tensorboard
-  - torchvision # causing segmentation fault
+#  - torchvision # causing segmentation fault
   - torchtext
   - ffmpeg
   - pillow
@@ -17,7 +17,7 @@ dependencies:
   - pip
   - pip:
     - setuptools
-    - torchvision # causing segmentation fault
+#    - torchvision # causing segmentation fault
     - matplotlib
     - pandas
     - requests
@@ -33,7 +33,7 @@ dependencies:
     - pytorch-forecasting
     - gspread
     - gspread-pandas
-#    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
+    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
     - google-api-python-client
     - google-images-search
     - google_images_download
