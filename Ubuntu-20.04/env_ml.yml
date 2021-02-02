@@ -31,8 +31,8 @@ dependencies:
     - pyarrow
     - fastparquet
     - pytorch-forecasting
-#    - gspread
-#    - gspread-pandas
+    - gspread
+    - gspread-pandas
 #    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
     - google-api-python-client
     - google-images-search
