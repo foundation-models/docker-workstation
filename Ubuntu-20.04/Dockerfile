@@ -37,13 +37,13 @@ RUN apt install -y sudo nano htop vim xterm curl wget git \
 && rm -rf /var/lib/apt/lists/*
 # localozation
 ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
+ENV LANG en_US.UTF-8f
 ENV LANGUAGE en_US.UTF-8
 
 RUN echo ${TIMEZONE} > /etc/timezone
 
 # Chrome
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 RUN apt update -y && apt install -y google-chrome-stable chromium-browser
 
