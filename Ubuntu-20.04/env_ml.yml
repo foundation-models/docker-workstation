@@ -5,30 +5,22 @@ channels:
   - defaults
 dependencies:
   - python=3.8
-  - cudatoolkit
-#  - pytorch
+  - cudatoolkit=10.1
+  - mpi4py=3.0 # installs cuda-aware openmpi
+  - pytorch
   - tensorboard
-#  - torchvision
-#  - torchtext
   - ffmpeg
   - pillow
   - wandb=0.9.7
   - pip
   - pip:
     - setuptools
-#    - torchvision
     - matplotlib
     - pandas
     - requests
-    - pyyaml
 #    - pillow
     - scikit-learn
     - scipy
-#    - spacy
-#    - pytorch
-#    - visdom
-#    - torch
-    - pyarrow
-    - fastparquet
-    - pytorch-forecasting
+    - gym
+
 
