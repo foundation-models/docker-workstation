@@ -62,7 +62,7 @@ RUN useradd -m ${USER} --uid=${UID} && echo "${USER}:${PW}" | chpasswd \
 # http://download.nomachine.com/download/6.11.2_1/Linux/nomachine_6.11.2_1_amd64.deb doesn't exist
 # so I download it from https://www.nomachine.com/download/download&id=2 and store it in goolge drive
 # RUN curl -fSL "http://download.nomachine.com/download/${NOMACHINE_VERSION}/Linux/${NOMACHINE_PACKAGE_NAME}" -o nomachine.deb \
-RUN curl -fSL "https://www.dropbox.com/s/co9emmttcbjh22c/nomachine_7.1.3_1_amd64.deb?dl=0" -o nomachine.deb \
+RUN curl -fSL "https://www.dropbox.com/s/co9emmttcbjh22c/nomachine_7.1.3_1_amd64.deb?dl=0&raw=1" -o nomachine.deb \
 && echo "${NOMACHINE_MD5} nomachine.deb" | md5sum -c - \
 && dpkg -i nomachine.deb && rm nomachine.deb
 RUN groupadd -r nomachine -g 433 && adduser ${USER} nomachine
