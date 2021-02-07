@@ -19,7 +19,7 @@ ENV DISPLAY :0
 
 RUN apt update -y && apt-get install -y aptitude && aptitude dist-upgrade --purge-unused -y && aptitude clean
 RUN apt -y upgrade
-RUN apt install -y software-properties-common
+RUN apt install -y software-properties-common sudo
 RUN apt install -y python3-pip
 RUN apt install -y build-essential libssl-dev libffi-dev python-dev python3-dev python3-setuptools screen
 RUN apt install -y ssh openssh-server
