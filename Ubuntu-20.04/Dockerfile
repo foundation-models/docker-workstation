@@ -28,12 +28,12 @@ RUN apt install -y libmysqlclient-dev default-libmysqlclient-dev
 RUN add-apt-repository universe
 RUN apt update -y && apt install -y dnsutils iputils-ping netcat nmap dnsutils locales locales-all pulseaudio cups
 
-RUN sudo apt update -y && sudo apt install fuse sshfs rclone -y \
+RUN apt update -y && apt install fuse sshfs rclone -y \
   && mknod -m 666 /dev/fuse c 10 229 \
-  && sudo echo 'user_allow_other' | sudo tee -a /etc/fuse.conf
+  && echo 'user_allow_other' | tee -a /etc/fuse.conf
 
 RUN apt install -y openjdk-14-jdk default-jdk
-RUN apt install -y sudo nano htop vim xterm curl wget git \
+RUN apt install -y nano htop vim xterm curl wget git \
 && rm -rf /var/lib/apt/lists/*
 # localozation
 ENV LC_ALL en_US.UTF-8
