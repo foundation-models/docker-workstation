@@ -44,5 +44,9 @@ dependencies:
     - jwt
     - emoji
     - fake_rpi
+    - Django
+    - django-viewsets
+    - django-permissions
+    - djangorestframework
 
 
