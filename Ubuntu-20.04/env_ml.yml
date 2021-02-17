@@ -28,6 +28,7 @@ dependencies:
     - django-viewsets
     - django-permissions
     - djangorestframework
+    - psycopg2
 
 
 
