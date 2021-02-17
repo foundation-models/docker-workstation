@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.8
+  - psycopg2
   - pip
   - pip:
     - setuptools
@@ -24,6 +25,6 @@ dependencies:
     - django-viewsets
     - django-permissions
     - djangorestframework
-    - psycopg2
+
 
 
