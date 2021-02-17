@@ -45,3 +45,5 @@ volumes:
     external: true
   developer:
     external: true
+  pgadmin:
+    external: true
