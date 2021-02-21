@@ -39,8 +39,10 @@ RUN cd /tmp && \
     sudo wget -q https://download.jetbrains.com/python/pycharm-professional-2020.3.3.tar.gz -O pycharm.tar.gz && \
     sudo mkdir -p /opt/apps && cd /opt/apps && sudo tar xvfz /tmp/pycharm.tar.gz && sudo rm /tmp/pycharm.tar.gz
 
-RUN sudo apt-get update -y && sudo apt --fix-broken install -y \
+RUN sudo apt-get update -y && sudo apt-get install openjdk-8-jdk && sudo apt --fix-broken install -y \
   && sudo apt install coinor-libcbc-dev coinor-cbc -y
+
+ENV INSTALL4J_JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 RUN sudo chgrp -R users /opt/conda/envs && sudo chmod -R g+w /opt/conda/envs
 
