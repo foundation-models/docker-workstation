@@ -1,36 +1,49 @@
 name: ml
 channels:
   - conda-forge
+  - pytorch
   - defaults
 dependencies:
   - python=3.8
   - cudatoolkit=10.1
 #  - detectronw2
   - mpi4py=3.0 # installs cuda-aware openmpi
-#  - pycocotools
+  - pytorch
+  - tensorboard
+#  - torchvision # causing segmentation fault
+#  - torchtext # giving a different error
   - ffmpeg
   - pillow
   - wandb=0.9.7
   - pip
   - pip:
     - setuptools
-    - numpy
-    - pandas
-    - scikit-learn
+#    - torchvision # causing segmentation fault
     - matplotlib
-    - seaborn
-    - statsmodels
-    - torch
-    - torchvision
-    - pytorch-lightning
-    - test-tube
-    - tensorboard
-    - tensorboardX
-    - terminado
-    - torchfile
-    - torchnet
-    - torchsummary
-    - visdom
-
+    - pandas
+    - requests
+#   - pyyaml # dont set it. Others library will set this
+#    - pillow
+    - scikit-learn
+    - scipy
+#    - spacy
+#    - pytorch
+#    - visdom#    - torch
+    - pyarrow
+    - gspread
+    - gspread-pandas
+    - google-auth # giving ERROR: Cannot uninstall 'PyYAML'
+    - google-api-python-client
+    - google-images-search
+    - google_images_download
+    - Pyrebase
+    - firebase-admin # firebase-admin should come after Pyrebase and requests otherwise Pyrebase installs the wrong version of requests 2.11.1
+    - firebase
+    - flask
+    - jwt
+    - Django
+    - django-viewsets
+    - django-permissions
+    - djangorestframework
 
 
