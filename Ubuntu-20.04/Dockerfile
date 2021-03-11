@@ -39,6 +39,10 @@ RUN cd /tmp && \
     sudo wget -q https://download.jetbrains.com/python/pycharm-professional-2020.3.3.tar.gz -O pycharm.tar.gz && \
     sudo mkdir -p /opt/apps && cd /opt/apps && sudo tar xvfz /tmp/pycharm.tar.gz && sudo rm /tmp/pycharm.tar.gz
 
+RUN cd /tmp && \
+    sudo wget -q  https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 -O /tmp/vscode.deb && \
+    sudo apt install /tmp/vscode.deb
+
 RUN sudo apt-get update -y && sudo apt-get install openjdk-8-jdk && sudo apt --fix-broken install -y \
   && sudo apt install coinor-libcbc-dev coinor-cbc -y
 
